@@ -8,6 +8,7 @@
 <link rel="apple-touch-icon" href="images/favicon-180.png">
 <title>Beacon Consulting Group — The Token Economics Desk</title>
 <style>
+#hedge .card{background:var(--bg)}
 :root{--bg:#d4f0fc;--panel:#d4f0fc;--alt:#89d6fb;--ink:#01303f;--mut:#02577a;--line:#89d6fb;--acc:#02a9f7;--acc2:#02577a;--hero:#01303f;--herotxt:#d4f0fc;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#01303f;--panel:#02577a;--alt:#02577a;--ink:#d4f0fc;--mut:#89d6fb;--line:#02577a;--acc:#02a9f7;--acc2:#89d6fb;--hero:#01303f;color-scheme:dark}}
@@ -69,15 +70,15 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <body>
 <nav><div class="wrap">
 <a class="logo" href="#" aria-label="Beacon Consulting Group home"><img src="images/logo-light.png" alt="" width="34" height="34">Beacon Consulting Group</a>
-<ul><li><a href="#claudeforce">Claudeforce</a></li><li><a href="#method">Method</a></li><li><a href="#hedge">Compute Risk</a></li><li><a href="#engage">Engage</a></li></ul>
+<ul><li><a href="#claudeforce">Claudeforce</a></li><li><a href="#sauce">Sauce</a></li><li><a href="#hedge">Compute Risk</a></li><li><a href="#engage">Engage</a></li></ul>
 <a class="btn" href="#contact">Book a token audit</a>
 </div></nav>
 
 <header class="hero"><div class="wrap">
 <div class="kick">The Token Economics Desk</div>
 <h1>Every token should earn its keep.</h1>
-<p>Beacon connects AI consumption to business outcomes. We cut wasted tokens, route work to the right model, and make Claude-powered Salesforce workflows measurable, governed and budgeted.</p>
-<div class="cta"><a class="btn" href="#method">See our method</a><a class="btn ghost" href="#claudeforce">Claude + Salesforce</a></div>
+<p>We connect AI consumption to business outcomes. We cut wasted tokens, route work to the right model, and make Claude-powered Salesforce workflows measurable, governed and budgeted.</p>
+<div class="cta"><a class="btn" href="#sauce">See our sauce</a><a class="btn ghost" href="#claudeforce">Claude + Salesforce</a></div>
 <div class="tick">
 <div><b>Goodput</b><span>tokens that drive a business action</span></div>
 <div><b>Yield rate</b><span>net of retries and failed outputs</span></div>
@@ -103,9 +104,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 </div>
 </div></section>
 
-<section id="method"><div class="wrap">
+<section id="sauce"><div class="wrap">
+<span class="tag">Sauce</span>
 <h2>From metered to managed</h2>
-<p class="lead">Our method keeps what already works on this site (routing, caching, prompt hygiene, outcome metrics) and packages it as a four-step engagement.</p>
+<p class="lead">Our sauce keeps what already works on this site (routing, caching, prompt hygiene, outcome metrics) and packages it as a four-step engagement.</p>
 <div class="steps">
 <div><section style="padding:0"><h3>Meter</h3><p>Instrument every model call across Agentforce, Claude, Slack and custom apps. Surface hidden token meters inside SaaS subscriptions.</p></section></div>
 <div><section style="padding:0"><h3>Route and cache</h3><p>Match models to task difficulty, enable prompt and semantic caching, shrink system prompts and eliminate retry storms.</p></section></div>
@@ -118,13 +120,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <span class="tag">Compute risk</span>
 <h2>Compute is becoming a priced, hedgeable commodity</h2>
 <p class="lead">Compute markets are maturing fast. Architect is building a CFTC-regulated exchange for GPU-hour futures, Luxor sells reserved capacity at fixed rates, and Anera Labs describes a forward capacity market for inference. Falling unit prices don’t protect budgets when usage grows several times faster, so planning now includes procurement strategy.</p>
-<div class="scroll"><table>
-<tr><th>Approach</th><th>What it solves</th><th>Beacon’s role</th></tr>
-<tr><td>Pay-as-you-go</td><td>Flexibility, no commitment</td><td>Meter, cap and alert before spend spikes</td></tr>
-<tr><td>Committed or reserved capacity</td><td>Predictable unit cost</td><td>Size commitments from real demand curves</td></tr>
-<tr><td>Forwards and futures on compute</td><td>Hedge price swings on large workloads</td><td>Evaluate fit and exposure with your finance team</td></tr>
-<tr><td>Open-source and self-hosted models</td><td>Lower marginal cost for routine tasks</td><td>Benchmark quality against cost per outcome</td></tr>
-</table></div>
+<div class="grid">
+<div class="card"><span class="tag">Flexibility</span><h3>Pay-as-you-go and committed capacity</h3><p>Pay-as-you-go keeps you flexible, while committed or reserved capacity gives predictable unit costs. We meter, cap and alert before spend spikes, and size commitments from your real demand curves.</p></div>
+<div class="card"><span class="tag">Hedging</span><h3>Forwards and futures on compute</h3><p>Hedge price swings on large, long-running workloads. We evaluate fit and exposure alongside your finance team before you commit to anything.</p></div>
+<div class="card"><span class="tag">Cost</span><h3>Open-source and self-hosted models</h3><p>Lower marginal cost for routine tasks. We benchmark quality against cost per outcome so you know where cheaper models are good enough.</p></div>
+</div>
 <p class="note">Beacon provides advisory analysis, not investment advice or brokerage services.</p>
 </div></section>
 
@@ -140,14 +140,22 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <section id="contact" class="band"><div class="wrap">
 <h2>Start with a token audit</h2>
 <p class="lead">Tell us where your AI spend is going. We will reply with a scoping note.</p>
-<form onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block'">
-<input placeholder="Name" aria-label="Name"><input type="email" placeholder="Work email" aria-label="Email">
-<textarea rows="4" placeholder="Current stack (e.g. Agentforce, Claude, custom agents)" aria-label="Message"></textarea>
-<button class="btn" type="submit">Send message</button><div class="ok">Thank you! Your message has been received.</div>
+<form id="contactForm" action="https://formspree.io/f/xqerjlnq" method="POST">
+<input name="name" placeholder="Name" aria-label="Name" required><input name="email" type="email" placeholder="Work email" aria-label="Email" required>
+<textarea name="message" rows="4" placeholder="Current stack (e.g. Agentforce, Claude, custom agents)" aria-label="Message" required></textarea>
+<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+<button class="btn" type="submit">Send message</button><div class="ok" role="status">Thank you! Your message has been received.</div><div class="ok err" role="alert" style="color:var(--acc)">Sorry, something went wrong. Please email us directly instead.</div>
 </form>
 </div></section>
 
-<footer><div class="wrap"><span><img src="images/logo-light.png" alt="" width="20" height="20" style="vertical-align:middle;margin-right:8px">© 2026 Beacon Consulting Group · BCGroupLtd.net</span><span><a href="#">Privacy</a> · <a href="#">Terms</a></span></div></footer>
+<footer><div class="wrap"><span><img src="images/logo-light.png" alt="" width="20" height="20" style="vertical-align:middle;margin-right:8px">© 2026 Beacon Consulting Group · BCGroupLtd.net</span></div></footer>
 
+<script>
+(function(){var f=document.getElementById('contactForm');if(!f||!window.fetch)return;
+f.addEventListener('submit',function(e){e.preventDefault();var ok=f.querySelector('.ok:not(.err)'),er=f.querySelector('.err'),b=f.querySelector('button');
+ok.style.display=er.style.display='none';b.disabled=true;
+fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){
+if(r.ok){f.reset();ok.style.display='block'}else{er.style.display='block'}b.disabled=false}).catch(function(){er.style.display='block';b.disabled=false})})})();
+</script>
 </body>
 </html>
